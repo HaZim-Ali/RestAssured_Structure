@@ -18,12 +18,22 @@ A Java API test automation project using REST Assured and TestNG to test the pos
 ```text
 RestAssured_Structure/
 ├── pom.xml
-├── allure-report/                     # Generated HTML report
+├── allure-report/                           # Generated HTML report
 └── src/
     └── test/
         ├── java/
-        │   └── tests/
-        │       └── PostsApiTest.java
+        │   └── com/
+        │       └── hazim/
+        │           └── api/
+        │               ├── config/
+        │               │   └── ApiConfig.java       # Base URL and API settings
+        │               ├── data/
+        │               │   └── PostTestData.java    # POST, PUT, and PATCH payloads
+        │               ├── specs/
+        │               │   └── RequestSpecs.java    # Shared request configuration
+        │               └── tests/
+        │                   └── posts/
+        │                       └── PostsApiTest.java # GET, POST, PUT, PATCH, DELETE tests
         └── resources/
             ├── allure.properties
             └── testng.xml
