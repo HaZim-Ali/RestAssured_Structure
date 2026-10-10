@@ -209,4 +209,3 @@ mvn -Dtest=PostsApiTest test
 
 - [DummyJSON Posts API](https://dummyjson.com/docs/posts)
 - [DummyJSON Auth API](https://dummyjson.com/docs/auth)
-# RestAssured_Structure
