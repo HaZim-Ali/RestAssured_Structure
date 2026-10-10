@@ -15,7 +15,7 @@ public class PostsApiTest {
         RestAssured.baseURI = "https://dummyjson.com";
     }
 
-    @Test(description = "Get post 1")
+    @Test(priority = 1 , description = "Get post 1")
     public void getPost() {
         given()
                 .when()
@@ -30,7 +30,7 @@ public class PostsApiTest {
                 .body("reactions.dislikes", equalTo(25));
     }
 
-    @Test(description = "Create a post")
+    @Test(priority = 2 , description = "Create a post")
     public void createPost() {
         String requestBody = """
                 {
@@ -53,7 +53,7 @@ public class PostsApiTest {
                 .body("userId", equalTo(5));
     }
 
-    @Test(description = "Replace a post")
+    @Test(priority = 3 , description = "Replace a post")
     public void replacePost() {
         String requestBody = """
                 {
@@ -76,7 +76,7 @@ public class PostsApiTest {
                 .body("userId", equalTo(5));
     }
 
-    @Test(description = "Update a post title")
+    @Test(priority = 4 , description = "Partially update a post")
     public void patchPost() {
         String requestBody = """
                 {
@@ -95,7 +95,7 @@ public class PostsApiTest {
                 .body("title", equalTo("Patched REST Assured post"));
     }
 
-    @Test(description = "Delete a post")
+    @Test(priority = 5 , description = "Delete a post")
     public void deletePost() {
         given()
                 .when()
